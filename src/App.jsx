@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from './sections/Navbar'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='relative w-screen min-h-screen overflow-x-auto'>
+      <Navbar />
+      <section id='home' className='min-h-screen bg-amber-600'/>
+      <section id='services' className='min-h-screen bg-amber-900'/>
+    </div>
   )
 }
 
