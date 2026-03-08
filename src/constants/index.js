@@ -1,36 +1,36 @@
 // index.js
 export const servicesData = [
   {
-    title: "FullStack Development",
+    title: "FullStack Craftsmanship",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "I build digital experiences with precision and cultural pride. From backend logic to sleek interfaces, my work blends clean architecture with creativity ensuring apps that are reliable, stylish, and future-ready.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        title: "Frontend Excellence",
+        description: "(React, Vue, TypeScript, Interactive UI/UX with flair)",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX)",
+        title: "Backend Engineering",
+        description: "(REST/GraphQL APIs, Auth Systems, Scalable Microservices)",
       },
       {
         title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        description: "(SQL/NoSQL Optimization, Growth-ready Structures)",
       },
     ],
   },
   {
-    title: "DevOps & Cloud Solutions",
+    title: "DevOps & Cloud Flow",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "I automate deployments and secure infrastructure so ideas don’t just launch—they thrive. With cloud platforms and CI/CD pipelines, your app runs smoothly, securely, and at scale.",
     items: [
       {
         title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        description: "(GitHub Actions, Docker, Kubernetes mastery)",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Server Management",
+        description: "(Linux, Nginx, Load Balancing with efficiency)",
       },
       {
         title: "Performance Tuning",
@@ -39,28 +39,28 @@ export const servicesData = [
     ],
   },
   {
-    title: "Security & Optimization",
+    title: "Security & Speed",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "Trust is everything. I harden apps against vulnerabilities and optimize performance so users enjoy speed, safety, and reliability—without compromise.",
     items: [
       {
         title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        description: "(Refactoring, Tech Debt Cleanup with precision)",
       },
       {
         title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        description: "(Vulnerability Assessments, Real-world scenarios)",
       },
       {
         title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        description: "(SSR, Metadata, Structured Data for visibility)",
       },
     ],
   },
   {
-    title: "Web & Mobile Apps",
+    title: "Web & Mobile Experiences",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "I design apps that feel alive—responsive, intuitive, and culturally resonant. Whether web or mobile, I bridge design and functionality to deliver products people love to use.",
     items: [
       {
         title: "Cross-Platform Apps",
@@ -68,7 +68,7 @@ export const servicesData = [
       },
       {
         title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        description: "(Offline mode, Push Notifications, Smooth UX)",
       },
       {
         title: "E-Commerce",
