@@ -3,18 +3,35 @@ import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { AnimatedTextLines } from "../components/AnimatedTextLines";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Icon } from "@iconify/react";
 
 const About = () => {
   const text = `Passionate about clean architecture
     I build scalable, high-performance solutions
     from prototype to production`;
-  const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
-  When I’m not shipping:
-🏀 Playing basketball—teamwork, rhythm, and strategy
-🎶 Listening to music—curating vibes that inspire creativity
-🌿 Nature walks—finding clarity and fresh ideas outdoors
-💻 Experimenting with new tech stacks—always exploring fresh tools and frameworks
-Faith, family, and innovation fuel my journey—because software isn’t just built, it’s lived.`;
+
+  const aboutIntro = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
+  Beyond the code:`;
+
+  const hobbies = [
+    {
+      icon: "emojione-monotone:basketball",
+      text: "Playing basketball — teamwork, rhythm, and strategy",
+    },
+    {
+      icon: "line-md:spotify",
+      text: "Listening to music — curating vibes that inspire creativity",
+    },
+    {
+      icon: "material-symbols:nature-people-sharp",
+      text: "Nature walks — finding clarity and fresh ideas outdoors",
+    },
+    {
+      icon: "glyphs:laptop-code-bold",
+      text: "Experimenting with new tech stacks — always exploring fresh tools and frameworks",
+    },
+  ];
+
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -39,10 +56,11 @@ Faith, family, and innovation fuel my journey—because software isn’t just bu
       scrollTrigger: { trigger: imgRef.current },
     });
   });
+
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Cod with purpose, Built to scale"}
+        subTitle={"Code with purpose, Built to scale"}
         title={"About"}
         text={text}
         textColor={"text-white"}
@@ -55,7 +73,26 @@ Faith, family, and innovation fuel my journey—because software isn’t just bu
           alt="man"
           className="w-md rounded-3xl"
         />
-        <AnimatedTextLines text={aboutText} className={"w-full"} />
+        <div className="w-full space-y-6">
+          <AnimatedTextLines text={aboutIntro} className={"w-full"} />
+          <div className="space-y-6">
+            {hobbies.map((item, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <Icon
+                  icon={item.icon}
+                  width="48"
+                  height="48"
+                  style={{ fontWeight: "bold" }}
+                />
+                <span className="text-white">{item.text}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6">
+            Faith, family, and innovation fuel my journey—because software isn’t
+            just built, it’s lived.
+          </p>
+        </div>
       </div>
     </section>
   );
