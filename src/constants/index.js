@@ -176,7 +176,7 @@ export const socials = [
   { name: "Instagram", href: "https://www.instagram.com/ajson_.dev?igsh=OGQ5ZDc2ODk2ZA==" },
   {
     name: "WhatsApp",
-    href: "https://wa.me/254701949593", // Direct chat link
+    href: "https://wa.me/254701949593", 
   },
   { name: "LinkedIn", href: "/" },
   { name: "GitHub", href: "https://github.com/alvin101-coder" },

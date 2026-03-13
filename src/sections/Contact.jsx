@@ -30,6 +30,9 @@ const Contact = () => {
     });
   }, []);
 
+  // Get current year dynamically
+  const currentYear = new Date().getFullYear();
+
   return (
     <section
       id="contact"
@@ -67,6 +70,8 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs leading-loose tracking-widest uppercase md:text-sm hover:text-gold hover:underline transition-transform duration-200 hover:scale-105"
                   >
                     {"{ "}
@@ -80,6 +85,11 @@ const Contact = () => {
         </div>
       </div>
       <Marquee items={items} className="text-white bg-transparent" />
+
+      {/* Footer line with dynamic year */}
+      <div className="py-6 text-center text-xs text-white/60">
+        © {currentYear} Alvin Jason — All Rights Reserved
+      </div>
     </section>
   );
 };

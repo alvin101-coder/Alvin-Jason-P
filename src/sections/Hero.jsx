@@ -3,15 +3,18 @@ import { Planet } from "../components/Planet";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
-  const text = `I help growing brands and startups gain an
-unfair advantage through premium
-results driven webs/apps`;
+
+  // Refined tagline text
+  const text = `I help brands and startups unlock growth
+through premium, results-driven web and mobile apps.`;
+
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"404 No Bugs Found"}
+        subTitle={"200 OK — Code Delivered"} // updated subtitle
         title={"Alvin Jason"}
         text={text}
         textColor={"text-black"}
