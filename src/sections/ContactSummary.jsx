@@ -6,7 +6,6 @@ import gsap from "gsap";
 const ContactSummary = () => {
   const containerRef = useRef(null);
 
-  // Refined marquee items
   const items = [
     "Creativity",
     "Craftsmanship",
@@ -15,7 +14,6 @@ const ContactSummary = () => {
     "Impact",
   ];
 
-  // Updated contact loop with "Contact me"
   const items2 = [
     "Contact me",
     "Let’s connect",
