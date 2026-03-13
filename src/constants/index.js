@@ -3,7 +3,7 @@ export const servicesData = [
   {
     title: "FullStack Craftsmanship",
     description:
-      "I build digital experiences with precision and cultural pride. From backend logic to sleek interfaces, my work blends clean architecture with creativity ensuring apps that are reliable, stylish, and future-ready.",
+      "I build digital experiences with precision and cultural pride. From backend logic to sleek interfaces, my work blends clean architecture with creativity—ensuring apps that are reliable, stylish, and future-ready.",
     items: [
       {
         title: "Frontend Excellence",
@@ -77,6 +77,7 @@ export const servicesData = [
     ],
   },
 ];
+
 export const projects = [
   {
     id: 1,
@@ -170,12 +171,17 @@ export const projects = [
     ],
   },
 ];
+
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
+  { name: "Instagram", href: "https://www.instagram.com/ajson_.dev?igsh=OGQ5ZDc2ODk2ZA==" },
   {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
+    name: "WhatsApp",
+    href: "https://wa.me/254701949593", // Direct chat link
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  { name: "LinkedIn", href: "/" },
+  { name: "GitHub", href: "https://github.com/alvin101-coder" },
+  {
+    name: "Gmail",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=alvinjason066@gmail.com",
+  },
 ];
