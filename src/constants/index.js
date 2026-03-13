@@ -81,18 +81,18 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "Mobile Accessories E-commerce",
+    name: "My Portfolio",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+      "A personal portfolio showcasing immersive, theme-driven web experiences with GSAP animations, modular architecture, and recruiter-ready presentation.",
+    href: "", // you can add your live portfolio link here
+    image: "/assets/projects/portfolio.png", // replace with a screenshot of your portfolio
+    bgImage: "/assets/backgrounds/planet.jpg", // optional background image
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
-      { id: 3, name: "Node.js" },
-      { id: 4, name: "MongoDB" },
-      { id: 5, name: "Tailwind CSS" },
+      { id: 3, name: "GSAP" },
+      { id: 4, name: "Tailwind CSS" },
+      { id: 5, name: "Three.js" },
     ],
   },
   {
@@ -171,6 +171,7 @@ export const projects = [
     ],
   },
 ];
+
 
 export const socials = [
   { name: "Instagram", href: "https://www.instagram.com/ajson_.dev?igsh=OGQ5ZDc2ODk2ZA==" },

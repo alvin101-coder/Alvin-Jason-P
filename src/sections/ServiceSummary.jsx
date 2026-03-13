@@ -52,7 +52,7 @@ const ServiceSummary = () => {
       >
         <p>APIs</p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p className="italics">Frontends</p>
+        <p className="italic">Frontends</p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>Scalability</p>
       </div>

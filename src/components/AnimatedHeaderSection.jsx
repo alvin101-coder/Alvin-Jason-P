@@ -58,7 +58,6 @@ const AnimatedHeaderSection = ({
                 <span key={index}>{part} </span>
               ))}
             </h1>
-            <div className="border-t-0 mt-3" />
           </div>
         </div>
       </div>
