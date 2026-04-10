@@ -1,59 +1,114 @@
 // index.js
+// src/constants/index.js
+
 export const servicesData = [
   {
-    title: "FullStack Craftsmanship",
+    title: "FullStack Development",
     description:
-      "I build digital experiences with precision and cultural pride. From backend logic to sleek interfaces, my work blends clean architecture with creativity—ensuring apps that are reliable, stylish, and future-ready.",
+      "I build modern, scalable web applications using clean architecture and practical engineering. From backend logic to responsive interfaces, I deliver solutions that are reliable, fast, and user‑focused.",
     items: [
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX with flair)",
+        title: "Frontend Development",
+        description: "React, Vue, TypeScript, Interactive UI/UX",
+        tech: [
+          { name: "React", icon: "skill-icons:react-light" },
+          { name: "Vue", icon: "skill-icons:vuejs-light" },
+          { name: "TypeScript", icon: "logos:typescript-icon" },
+          { name: "JavaScript", icon: "logos:javascript" },
+          { name: "Next.js", icon: "skill-icons:nextjs-light" },
+          { name: "Responsive UI/UX", icon: "/" },
+        ],
       },
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Auth Systems, Scalable Microservices)",
+        title: "Backend Development",
+        description: "Python, Flask APIs, REST APIs, Authentication Systems, Node.js Services",
+        tech: [
+          { name: "Python", icon: "skill-icons:python-light" },
+          { name: "Flask", icon: "skill-icons:flask-light" },
+          { name: "Node.js", icon: "devicon-plain:nodejs-wordmark" },
+          { name: "REST APIs", icon: "mdi:api" },
+          { name: "Authentication Systems", icon: "mdi:lock-check" },
+        ],
       },
       {
         title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Growth-ready Structures)",
+        description: "SQL/NoSQL, Growth-ready Structures, MongoDB",
+        tech: [
+          { name: "SQL", icon: "vscode-icons:file-type-sql" },
+          { name: "NoSQL", icon: "mdi:database-outline" },
+          { name: "MongoDB", icon: "skill-icons:mongodb" },
+          { name: "Schema Design", icon: "material-symbols:schema" },
+        ],
       },
     ],
   },
   {
-    title: "DevOps & Cloud Flow",
+    title: "Deployment & Optimization",
     description:
-      "I automate deployments and secure infrastructure so ideas don’t just launch—they thrive. With cloud platforms and CI/CD pipelines, your app runs smoothly, securely, and at scale.",
+      "I streamline deployments and optimize performance so apps run smoothly and efficiently. From hosting to CI/CD, I ensure your product is stable and secure.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes mastery)",
+        title: "CI/CD Workflows",
+        description: "GitHub Actions, Docker, Automated Deployments",
+        tech: [
+          { name: "GitHub Actions", icon: "skill-icons:github-light" },
+          { name: "Docker", icon: "skill-icons:docker" },
+          { name: "Automated Builds & Deployments", icon: "" },
+        ],
       },
       {
         title: "Server Management",
-        description: "(Linux, Nginx, Load Balancing with efficiency)",
+        description: "Linux, Nginx, Hosting & Maintenance",
+        tech: [
+          { name: "Linux", icon: "skill-icons:linux-light" },
+          { name: "Nginx", icon: "logos:nginx" },
+          { name: "Environment Setup", icon: "" },
+          { name: "App Hosting", icon: "simple-icons:hostinger", },
+        ],
       },
       {
         title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        description: "Caching, Compression, Faster Load Times",
+        tech: [
+          { name: "Caching", icon: "material-symbols:cached-rounded" },
+          { name: "Compression", icon: "mdi:zip-box-outline" },
+          { name: "Speed", icon: "line-md:speed-twotone-loop" },
+        ],
+      },
+      {
+        title: "Cloud Services",
+        description: "AWS, Vercel, Netlify, Firebase Hosting",
+        tech: [
+          { name: "AWS", icon: "skill-icons:aws-light" },
+          { name: "Vercel", icon: "skill-icons:vercel-light" },
+          { name: "Netlify", icon: "skill-icons:netlify-light" },
+          { name: "Firebase Hosting", icon: "logos:firebase" },
+        ],
       },
     ],
   },
   {
-    title: "Security & Speed",
+    title: "Code Quality & Reliability",
     description:
-      "Trust is everything. I harden apps against vulnerabilities and optimize performance so users enjoy speed, safety, and reliability—without compromise.",
+      "I review and refine codebases to ensure maintainability, speed, and security. My focus is on delivering bug-free, future-ready solutions.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup with precision)",
+        title: "Code Reviews",
+        description: "Refactoring, Cleanup, Best Practices",
+        tech: [
+          { name: "Refactoring", icon: "mdi:code-tags-check" },
+          { name: "Best Practices", icon: "mdi:check-decagram" },
+          { name: "Cleanup", icon: "" },
+        ],
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments, Real-world scenarios)",
-      },
-      {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data for visibility)",
+        title: "Debugging",
+        description: "Error Handling, Testing, Reliable Fixes",
+        tech: [
+          { name: "Error Handling", icon: "material-symbols:error-rounded" },
+          { name: "Testing", icon: "mdi:test-tube" },
+          { name: "Reliable Fixes", icon: "eos-icons:patch-fixes" },
+        ],
       },
     ],
   },
@@ -64,19 +119,33 @@ export const servicesData = [
     items: [
       {
         title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        description: "Web + Mobile with a single codebase",
+        tech: [
+          { name: "Web + Mobile with a single codebase", icon: "" },
+        ],
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications, Smooth UX)",
+        title: "E-Commerce Solutions",
+        description: "Checkout flows, Payment Gateways, Inventory APIs",
+        tech: [
+          { name: "Checkout flows", icon: "" },
+          { name: "Payment Gateways", icon: "" },
+          { name: "Inventory APIs", icon: "mdi:package-variant" },
+        ],
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "Animations & Interactivity",
+        description: "GSAP, react‑three‑fiber, Motion Design",
+        tech: [
+          { name: "GSAP", icon: "simple-icons:gsap" },
+          { name: "React Three Fiber", icon: "" },
+          { name: "Motion Design", icon: "" },
+        ],
       },
     ],
   },
 ];
+
 
 export const projects = [
   {
@@ -84,9 +153,9 @@ export const projects = [
     name: "My Portfolio",
     description:
       "A personal portfolio showcasing immersive, theme-driven web experiences with GSAP animations, modular architecture, and recruiter-ready presentation.",
-    href: "", // you can add your live portfolio link here
-    image: "/assets/projects/portfolio.png", // replace with a screenshot of your portfolio
-    bgImage: "/assets/backgrounds/planet.jpg", // optional background image
+    href: "", 
+    image: "/assets/projects/portfolio.png", 
+    bgImage: "/assets/backgrounds/blanket.jpg", 
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },

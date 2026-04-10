@@ -114,6 +114,21 @@ body {
   font-family: var(--font-amiamie);
 }
 
+.icon-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.service-item:hover .icon-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 @utility clip-path {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
@@ -133,3 +148,10 @@ body {
 @utility contact-text-responsive {
   @apply text-[42px] sm:text-[52px] md:text-[62px] lg:text-[100px];
 }
+
+.bar {
+  transform-origin: bottom;
+  height: 1rem;
+}
+
+

@@ -5,7 +5,6 @@ import gsap from "gsap";
 
 const ContactSummary = () => {
   const containerRef = useRef(null);
-
   const items = [
     "Creativity",
     "Craftsmanship",
@@ -35,7 +34,6 @@ const ContactSummary = () => {
       },
     });
   }, []);
-
   return (
     <section
       ref={containerRef}
