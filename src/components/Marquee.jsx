@@ -1,9 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import gsap from "gsap";
 import { Observer } from "gsap/all";
-import _Observer from "gsap/Observer";
 import { useEffect, useRef } from "react";
-gsap.registerPlugin(_Observer)
+gsap.registerPlugin(Observer);
 const Marquee = ({
   items,
   className = "text-white bg-black",

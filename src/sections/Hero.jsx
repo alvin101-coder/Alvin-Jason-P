@@ -7,14 +7,13 @@ import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
 
-  // Refined tagline text
   const text = `I help brands and startups unlock growth
 through premium, results-driven web and mobile apps.`;
 
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"200 OK — Code Delivered"} // updated subtitle
+        subTitle={"200 OK — Code Delivered"} 
         title={"Alvin Jason"}
         text={text}
         textColor={"text-black"}

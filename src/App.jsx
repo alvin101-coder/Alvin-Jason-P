@@ -14,16 +14,47 @@ const App = () => {
   const { progress } = useProgress();
   const [isReady, setIsReady] = useState(false);
 
+  const greetings = [
+    "Hello!",
+    "Bonjour!",
+    "Hola!",
+    "Jambo!",
+    "Ciao!",
+    "Namaste!",
+    "Konnichiwa!",
+    "Salam!"
+  ];
+  const [greetingIndex, setGreetingIndex] = useState(0);
+
   useEffect(() => {
     if (progress === 100) {
-      setIsReady(true);
+      // Delay hiding so greetings cycle a bit longer
+      setTimeout(() => setIsReady(true), 5000);
     }
   }, [progress]);
+
+  // cycle greetings quickly until loading is complete
+  useEffect(() => {
+    if (!isReady) {
+      const interval = setInterval(() => {
+        setGreetingIndex(prev => (prev + 1) % greetings.length);
+      }, 300); // cycle every 0.5s
+      return () => clearInterval(interval);
+    }
+  }, [isReady, greetings.length]);
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
       {!isReady && (
         <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white transition-opacity duration-700 font-light">
+          {/* Greetings above with fade effect */}
+          <p
+            key={greetingIndex} // forces re-render for fade
+            className="mb-2 text-2xl font-bold tracking-widest animate-pulse transition-opacity duration-500 opacity-100"
+          >
+            {greetings[greetingIndex]}
+          </p>
+          {/* Loading percentage below */}
           <p className="mb-4 text-xl tracking-widest animate-pulse">
             Loading {Math.floor(progress)}%
           </p>

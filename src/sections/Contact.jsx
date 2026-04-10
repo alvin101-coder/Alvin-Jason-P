@@ -30,7 +30,6 @@ const Contact = () => {
     });
   }, []);
 
-  // Get current year dynamically
   const currentYear = new Date().getFullYear();
 
   return (
@@ -86,9 +85,8 @@ const Contact = () => {
       </div>
       <Marquee items={items} className="text-white bg-transparent" />
 
-      {/* Footer line with dynamic year */}
       <div className="py-6 text-center text-xs text-white/60">
-        © {currentYear} Alvin Jason — All Rights Reserved
+        © {currentYear} <a href="">Alvin Jason</a> — All Rights Reserved
       </div>
     </section>
   );

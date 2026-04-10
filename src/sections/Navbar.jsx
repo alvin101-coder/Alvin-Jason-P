@@ -3,6 +3,8 @@ import { socials } from "../constants";
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import AudioToggle from "../components/AudioToggle";
+
 
 
 const Navbar = () => {
@@ -143,6 +145,10 @@ const Navbar = () => {
           <span 
           ref={bottomLineRef}
           className="block w-8 h-0.5 bg-white rounded-full origin-center"></span>
+    </div>
+
+    <div className="fixed bottom-6 right-6 z-50">
+      <AudioToggle />
     </div>
     </>
   );
