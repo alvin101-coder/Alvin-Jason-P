@@ -43,7 +43,7 @@ const Services = () => {
         <div
           ref={(el) => (serviceRefs.current[index] = el)}
           key={index}
-          className="sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
+          className="sticky px-4 sm:px-6 md:px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
           style={
             isDesktop
               ? {
@@ -53,41 +53,42 @@ const Services = () => {
               : { top: 0 }
           }
         >
-          <div className="flex items-center justify-between gap-4 font-light">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-4xl lg:text-5xl">{service.title}</h2>
-              <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/70 text-pretty">
-                {service.description}
-              </p>
+          <div className="flex flex-col gap-6 font-light">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl">{service.title}</h2>
+            <p className="text-base sm:text-lg lg:text-2xl leading-relaxed tracking-widest text-white/70 text-pretty">
+              {service.description}
+            </p>
 
-              <div className="flex flex-col gap-2 text-2xl sm:gap-4 lg:text-3xl text-white/80">
-                {service.items.map((item, itemIndex) => (
-                  <div key={`item-${index}-${itemIndex}`}>
-                    <h3 className="flex">
-                      <span className="mr-12 text-lg text-white/30">
-                        0{itemIndex + 1}
-                      </span>
-                      {item.title}
-                    </h3>
+            <div className="flex flex-col gap-2 text-lg sm:text-xl lg:text-3xl text-white/80">
+              {service.items.map((item, itemIndex) => (
+                <div key={`item-${index}-${itemIndex}`}>
+                  <h3 className="flex">
+                    <span className="mr-6 sm:mr-12 text-sm sm:text-lg text-white/30">
+                      0{itemIndex + 1}
+                    </span>
+                    {item.title}
+                  </h3>
 
-                    {/* Each tech keyword with hover icon */}
-                    <p className="ml-[3.5rem] text-lg text-white/50 flex flex-wrap gap-6">
-                      {item.tech?.map((t) => (
-                        <span key={t.name} className="relative group cursor-pointer">
-                          {t.name}
-                          <span className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <Icon icon={t.icon} className="text-2xl" />
-                          </span>
+                  {/* Each tech keyword with hover icon */}
+                  <p className="ml-[2rem] sm:ml-[3.5rem] text-sm sm:text-base text-white/50 flex flex-wrap gap-3 sm:gap-6">
+                    {item.tech?.map((t) => (
+                      <span
+                        key={t.name}
+                        className="relative group cursor-pointer"
+                      >
+                        {t.name}
+                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <Icon icon={t.icon} className="text-xl sm:text-2xl" />
                         </span>
-                      ))}
-                    </p>
+                      </span>
+                    ))}
+                  </p>
 
-                    {itemIndex < service.items.length - 1 && (
-                      <div className="w-full h-px my-2 bg-white/30" />
-                    )}
-                  </div>
-                ))}
-              </div>
+                  {itemIndex < service.items.length - 1 && (
+                    <div className="w-full h-px my-2 bg-white/30" />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>

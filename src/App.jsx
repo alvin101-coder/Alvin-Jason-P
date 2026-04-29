@@ -26,36 +26,36 @@ const App = () => {
   ];
   const [greetingIndex, setGreetingIndex] = useState(0);
 
+  // mark ready shortly after hitting 100%
   useEffect(() => {
     if (progress === 100) {
-      // Delay hiding so greetings cycle a bit longer
-      setTimeout(() => setIsReady(true), 5000);
+      const timer = setTimeout(() => setIsReady(true), 1200);
+      return () => clearTimeout(timer);
     }
   }, [progress]);
 
-  // cycle greetings quickly until loading is complete
+  // cycle greetings in a loop until ready
   useEffect(() => {
     if (!isReady) {
       const interval = setInterval(() => {
         setGreetingIndex(prev => (prev + 1) % greetings.length);
-      }, 300); // cycle every 0.5s
+      }, 2000); // change every 2s for smoother flow
       return () => clearInterval(interval);
     }
-  }, [isReady, greetings.length]);
+  }, [isReady]);
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
       {!isReady && (
-        <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white transition-opacity duration-700 font-light">
-          {/* Greetings above with fade effect */}
+        <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white font-light">
+          {/* Greetings with fade loop */}
           <p
-            key={greetingIndex} // forces re-render for fade
-            className="mb-2 text-2xl font-bold tracking-widest animate-pulse transition-opacity duration-500 opacity-100"
+            className="mb-2 text-2xl font-bold tracking-widest transition-opacity duration-1000 opacity-100"
           >
             {greetings[greetingIndex]}
           </p>
-          {/* Loading percentage below */}
-          <p className="mb-4 text-xl tracking-widest animate-pulse">
+          {/* Loading percentage */}
+          <p className="mb-4 text-xl tracking-widest">
             Loading {Math.floor(progress)}%
           </p>
           <div className="relative h-1 overflow-hidden rounded w-60 bg-white/20">
@@ -69,7 +69,7 @@ const App = () => {
       <div
         className={`${
           isReady ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000`}
+        } transition-opacity duration-700`}
       >
         <Navbar />
         <Hero />
