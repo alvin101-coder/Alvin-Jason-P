@@ -1,8 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import Marquee from "../components/Marquee";
 import { socials } from "../constants";
 import gsap from "gsap";
+import SimpleMarquee from "../components/SimpleMarquee";
 
 const Contact = () => {
   const text = `Got a question or project idea?
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Marquee items={items} className="text-white bg-transparent" />
+      <SimpleMarquee items={items} className="text-white bg-transparent" />
 
       <div className="py-6 text-center text-xs text-white/60">
         © {currentYear} <a href="">Alvin Jason</a> — All Rights Reserved
